@@ -15,6 +15,8 @@ $(document).ready(function() {
 
   $("form#written-form").submit(function() {
   var writtenAnswer = $("input#written-imput").val()
+  $("#written-form").hide()
+  event.preventDefault();
   });
 
   $("#questionButton3").click(function() {
@@ -22,6 +24,4 @@ $(document).ready(function() {
   });
 
   var chosenFriend = $("input:radio[name=friendChoice]:checked").val()
-
-  event.preventDefault();
 });
