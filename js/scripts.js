@@ -1,10 +1,10 @@
 $(document).ready(function() {
   $("#pictureAnswersC").click(function() {
-    var pictureAnswer = 10
+    var pictureAnswer = 20
     $(".pictureChoice").hide();
   });
   $("#pictureAnswersRUBY").click(function() {
-    var pictureAnswer = 20
+    var pictureAnswer = 25
     $(".pictureChoice").hide();
   });
 
