@@ -1,3 +1,7 @@
+body {
+  background: radial-gradient(lightblue 70%, cyan);
+}
+
 .container {
   margin: 30px;
   border: 10px;
@@ -9,7 +13,7 @@
 }
 
 .pictureChoice img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
 
 }
