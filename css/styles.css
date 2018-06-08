@@ -17,3 +17,14 @@ body {
   height: 220px;
 
 }
+
+.answerC {
+  display: none;
+}
+
+.answerREACT {
+  display: none;
+}
+.answerRuby {
+  display: none;
+}

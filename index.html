@@ -13,52 +13,68 @@
         <p>Do you know the difference between the languages in the offfered programs?</p>
         <p>Take a quiz to test for a quick estimation for which track is best for you.</p>
       <div class="pictureChoice">
-        <h3>Don't about it. Jist follow your gut and pick the picture you think looks the coolest.</h3>
+        <h3 id="questionTitle">Click on the any or all language logo(s) that you think look cool</h3>
           <img id="pictureAnswersC" src="img/cSharp.png" alt="a picture to resumble C# here">
           <img id="pictureAnswersRUBY" src="img/ruby.png" alt="a picture to resumble Ruby here">
           <img id="pictureAnswersREACT" src="img/react.png" alt="a picture to resumble react here">
-
-      </div>
+        </div>
       <br>
       <br>
       <br>
       <select class="form-control" id=questionOne>
-        <option value=test0>What do you think</option>
-        <option value=2>Making a  brand new website    react</option>
-        <option value=test3>Changing a websites interacting applications  // rails </option>
-        <option value=test2>Enjoy using amazon, twitter, treehouse webpages  // rails </option>
-        <option value=test2>Reading about something that is well documented //c#  </option>
-        <option value=test2>Constructing a blueprint for building a house   //c# </option>
-        <option value=test2>Changing a websites color and layout   react </option>
+        <option value="0">What sounds the most fun to you?</option>
+        <option value="49">Making a  brand new website    react</option>
+        <option value="27">Changing a websites interacting applications  // rails </option>
+        <option value="9">Enjoy using amazon, twitter, treehouse webpages  // rails </option>
+        <option value="25">Reading about something that is well documented //c#  </option>
+        <option value="125">Constructing a blueprint for building a house   //c# </option>
+        <option value="343">Changing a websites color and layout   react </option>
       </select>
-      <button type="submit" class="questionButton1">Submit</button>
+      <button type="submit" id="questionButtonOne">Submit</button>
       <br>
       <br>
       <br>
       <form id="written-form">
         <h3>On a scale from 1-30, important is it that you pick the language with the highest salary?</h3>
         <label for="written-input"></label>
-        <input type="text" id="written-input1">
+        <input type="text" id="written-input">
         <button type="submit" class="questionButton2">Submit</button>
       </form>
       <br>
       <br>
       <br>
       <div class="radio">
-        <h3>Pretend that it is your first day freshmen year of higschool. You just moved to a small town. Everyone around town went out of their way to explain how friendships in the highschool typically work. The friendships in the highschool are limited to basically only one main friend at a time for the first few years. One your first day you found out that friends are picked in the first day. You narrowed your options down to three people: Matt, an athletic guy who will undoublfully be popular for the next few years. Lisa, who you saw drawing a picture of the classroom with the addition of christmas decorations around the room. She showed you a few random websites that had cats on them. Nathan,  </h3>
+        <h3>Who would you choose as a friend? Matt, an athletic guy who will be popular for the next few years. Lisa, who likes drawing pictures with lots of squares. Or Nathan, the chillest guy ever. </h3>
         <label>
-          <input type="radio" name="friendChoice" value="1">
-          Matt
+          <input type="radio" name="friendChoice" value="125"> Matt
         </label>
         <label>
-          <input type="radio" name="friendChoice" value="2">
-          Lisa
+          <input type="radio" name="friendChoice" value="343"> Lisa
         </label>
         <label>
-          <input type="radio" name="friendChoice" value="3">
-          Nathan
+          <input type="radio" name="friendChoice" value="81"> Nathan
         </label>
         <button type="submit" id="questionButton3">Submit your new friendship here</button>
+      </div>
+
+      <div class="finished">
+      <button type="button" id="finishedButton">Click here to see your results</button>
+      </div>
+
+      <div class="answerC">
+        <h3 id="header-for-result">Suggested track based on your answer(s)</h3>
+        <p> You should look into the CSS/React track</p>
+        <button type="button" name="restartWebpage">Click here to restart the quiz</button>
+      </div>
+      <div class="answerRuby">
+        <h3 id="header-for-result">Suggested track based on your answer(s)</h3>
+        <p> You should look into the Ruby/Rails track</p>
+        <button type="button" name="restartWebpage">Click here to restart the quiz</button>
+      </div>
+      <div class="answerREACT">
+        <h3 id="header-for-result">Suggested track based on your answer(s)</h3>
+        <p> You should look into the C#/.NET track</p>
+        <button type="button" name="restartWebpage">Click here to restart the quiz</button>
       </div>
     </div>
   </body>
