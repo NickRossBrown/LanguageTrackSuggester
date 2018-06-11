@@ -92,6 +92,10 @@ $(document).ready(function() {
       if ((cSharpPoints > reactPoints) && (cSharpPoints > rubyPoints)){
         $("#finishedButton").show()
       }
+      else {
+        $(".answerRuby").show()
+        $("#finishedButton").hide()
+      }
     })
   $(".restartWebpage").click(function() {
     console.log("tetset")
