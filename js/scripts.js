@@ -3,9 +3,9 @@ $(document).ready(function() {
   selectedAnswer = 0
   writtenAnswer = 0
   answerpoints = 1
-  rubyPoints=0//3
-  reactPoints=0 //7
-  cSharpPoints=0 //5
+  rubyPoints=1//3
+  reactPoints=1 //7
+  cSharpPoints=1 //5
   function countPoints(answerpoints){
     while (answerpoints%3===0){
       rubyPoints+=1
@@ -43,6 +43,7 @@ $(document).ready(function() {
 
   $("#questionButtonOne").click(function() {
     var selectedAnswer = parseInt($("#questionOne").val())
+    console.log(selectedAnswer)
     answerpoints*=selectedAnswer
     countPoints(selectedAnswer)
     $("#questionButtonOne").hide()
@@ -73,7 +74,9 @@ $(document).ready(function() {
     $(".radio").hide();
   });
   $("#questionButtonTwo").click(function() {
-    var selectedAnswer = parseInt($("#questionenTwo").val())
+    console.log("reached new checkpoint")
+    var selectedAnswer = parseInt($("#questionTwo").val())
+    console.log(selectedAnswer)
     answerpoints*=selectedAnswer
     countPoints(selectedAnswer)
     $("#questionButtonTwo").hide()
@@ -82,29 +85,24 @@ $(document).ready(function() {
   });
 
   $("#finishedButton").click(function() {
-      if ((rubyPoints >= reactPoints) && (rubyPoints >= cSharpPoints)){
+      if ((rubyPoints > reactPoints) && (rubyPoints > cSharpPoints)){
         $(".answerRuby").show()
         $("#finishedButton").hide()
       }
       if ((reactPoints > rubyPoints) && (reactPoints > cSharpPoints)){
-        $("#finishedButton").show()
+        $(".answerREACT").show()
+        $("#finishedButton").hide()
       }
       if ((cSharpPoints > reactPoints) && (cSharpPoints > rubyPoints)){
-        $("#finishedButton").show()
+        $(".answerC").show()
+        $("#finishedButton").hide()
       }
-      else {
-        $(".answerRuby").show()
+      else if ((rubyPoints === reactPoints) && (reactPoints === cSharpPoints)){
+        $(".noAnswer").show()
         $("#finishedButton").hide()
       }
     })
   $(".restartWebpage").click(function() {
-    console.log("tetset")
     location.reload();
-
-
     })
-
-
-
-  // chosenFriend = $("input:radio[name=friendChoice]:checked").val()
 });
