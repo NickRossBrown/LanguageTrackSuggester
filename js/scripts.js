@@ -7,6 +7,7 @@ $(document).ready(function() {
   reactPoints=1 //7
   cSharpPoints=1 //5
   function countPoints(answerpoints){
+    console.log("ruby ponts --- " + rubyPoints +"c shartp ponts --- " + cSharpPoints + "react ponts  " + "react ponts --" + reactPoints)
     while (answerpoints%3===0){
       rubyPoints+=1
       answerpoints= answerpoints / 3
@@ -22,6 +23,7 @@ $(document).ready(function() {
       answerpoints= answerpoints / 7
       console.log("react ponts  " + reactPoints)
       }
+    console.log("ruby ponts --- " + rubyPoints +"c shartp ponts --- " + cSharpPoints + "react ponts  " + "react ponts --" + reactPoints)
     }
   $("#pictureAnswersC").click(function() {
     countPoints(5)
@@ -85,16 +87,16 @@ $(document).ready(function() {
   });
 
   $("#finishedButton").click(function() {
-      if ((rubyPoints > reactPoints) && (rubyPoints > cSharpPoints)){
+      if ((rubyPoints >= reactPoints) && (rubyPoints > cSharpPoints)){
         $(".answerRuby").show()
         $("#finishedButton").hide()
       }
-      if ((reactPoints > rubyPoints) && (reactPoints > cSharpPoints)){
-        $(".answerREACT").show()
+      if ((reactPoints > rubyPoints) && (reactPoints >= cSharpPoints)){
+        $(".answerC").show()
         $("#finishedButton").hide()
       }
-      if ((cSharpPoints > reactPoints) && (cSharpPoints > rubyPoints)){
-        $(".answerC").show()
+      if ((cSharpPoints > reactPoints) && (cSharpPoints >= rubyPoints)){
+        $(".answerREACT").show()
         $("#finishedButton").hide()
       }
       else if ((rubyPoints === reactPoints) && (reactPoints === cSharpPoints)){
