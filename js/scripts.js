@@ -93,13 +93,10 @@ $(document).ready(function() {
         $("#finishedButton").show()
       }
     })
-  $(".restartWebpage1").click(function() {
+  $(".restartWebpage").click(function() {
     console.log("tetset")
+    location.reload();
 
-    $(".answerRuby").hide()
-    $(".answerREACT").hide()
-    $(".answerC").hide()
-    $("#finishedButton").show()
 
     })
 
